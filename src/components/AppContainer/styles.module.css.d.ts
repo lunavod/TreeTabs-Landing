@@ -1,0 +1,25 @@
+declare const classNames: {
+  readonly wrapper: "wrapper";
+  readonly content: "content";
+  readonly light: "light";
+  readonly dark: "dark";
+  readonly descriptionWrapper: "descriptionWrapper";
+  readonly logoWrapper: "logoWrapper";
+  readonly logo: "logo";
+  readonly partOne: "partOne";
+  readonly partTwo: "partTwo";
+  readonly logoSub: "logoSub";
+  readonly vivaldi: "vivaldi";
+  readonly download: "download";
+  readonly tabs: "tabs";
+  readonly tab: "tab";
+  readonly close: "close";
+  readonly closeWithChildren: "closeWithChildren";
+  readonly unread: "unread";
+  readonly active: "active";
+  readonly transparent: "transparent";
+  readonly noFavicon: "noFavicon";
+  readonly title: "title";
+  readonly add: "add";
+};
+export = classNames;
