@@ -11,7 +11,7 @@ function prefersDark() {
   return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
-function AppContainer() {
+function IndexPage() {
   const [theme] = useState(() => {
     return prefersDark() ? "dark" : "vivaldi";
   });
@@ -89,22 +89,23 @@ function AppContainer() {
                 icon="https://vivaldi.net/wp-content/themes/home/favicon-16x16.png"
                 title="Desktop | Vivaldi Forum"
                 level={3}
+                unread
               />
               <Tab
                 icon="https://vivaldi.net/wp-content/themes/home/favicon-16x16.png"
                 title="Customizations & Extensions | Vivaldi Forum"
                 level={4}
+                unread
               />
               <Tab
                 icon="https://vivaldi.net/wp-content/themes/home/favicon-16x16.png"
                 title="Community & Services | Vivaldi Forum"
                 level={3}
+                unread
               />
               <Tab icon="/app_icons/icon.svg" title={document.title} />
-              <div styleName="tab transparent">
-                <span styleName="add">
-                  <PlusIcon />
-                </span>
+              <div styleName="tab transparent addTab">
+                <PlusIcon />
                 <span>Open a New Tab</span>
               </div>
             </div>
@@ -121,16 +122,22 @@ function Tab({
   title,
   active = false,
   level = 1,
+  unread = false,
 }: {
   icon: string;
   title: string;
   active?: boolean;
   level?: number;
+  unread?: boolean;
 }) {
   const padding = (level - 1) * 12;
   return (
     <div
-      className={clsx(styles.tab, active && styles.active)}
+      className={clsx(
+        styles.tab,
+        active && styles.active,
+        unread && styles.unread
+      )}
       style={{ marginLeft: `${padding}px` }}
     >
       <img src={icon} />
@@ -142,4 +149,4 @@ function Tab({
   );
 }
 
-export default AppContainer;
+export default IndexPage;

@@ -1,15 +1,20 @@
-import AppContainer from "./components/AppContainer";
+import AfterInstallPage from "./components/AfterInstallPage";
+import IndexPage from "./components/IndexPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <AppContainer />,
+      element: <IndexPage />,
     },
     {
       path: "/container",
       element: <div id="container" />,
+    },
+    {
+      path: "/afterInstall",
+      element: <AfterInstallPage />,
     },
   ]);
 

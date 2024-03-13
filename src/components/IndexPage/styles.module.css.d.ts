@@ -20,6 +20,7 @@ declare const classNames: {
   readonly transparent: "transparent";
   readonly noFavicon: "noFavicon";
   readonly title: "title";
+  readonly addTab: "addTab";
   readonly add: "add";
 };
 export = classNames;

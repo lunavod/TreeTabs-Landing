@@ -1,0 +1,116 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.light {
+  --appBg: var(--colorBgLightIntense);
+  --appColor: var(--colorFg);
+  --scrollbarTrackBg: var(--colorBg);
+  --scrollbarThumbBg: #a3a6ab;
+
+  --tabBg: var(--colorBgDark);
+  --tabColor: var(--colorFg);
+
+  --tabBgHover: var(--colorBgDarken);
+  --tabColorHover: var(--colorFg);
+
+  --tabBgActive: var(--highlightBgColor);
+  --tabColorActive: var(--highlightTextColor);
+}
+
+.dark {
+  --appBg: var(--colorBgLighter);
+  --appColor: var(--colorFg);
+  --scrollbarTrackBg: var(--colorBg);
+  --scrollbarThumbBg: #a3a6ab;
+
+  --tabBg: rgba(256, 256, 256, 0.1);
+  --tabColor: var(--colorFg);
+
+  --tabBgHover: rgba(256, 256, 256, 0.2);
+  --tabColorHover: var(--colorFg);
+
+  --tabBgActive: var(--highlightBgColor);
+  --tabColorActive: var(--highlightTextColor);
+
+  --tabBgActive: var(--highlightBgColor);
+  --tabColorActive: var(--highlightTextColor);
+}
+
+.content {
+  display: flex;
+  /* gap: 12px; */
+  flex-direction: column;
+  box-sizing: border-box;
+  font-size: 1.1em;
+
+  ol {
+    padding-inline-start: 3ch;
+
+    li {
+      margin-bottom: 12px;
+    }
+  }
+
+  .small {
+    font-size: 0.8em;
+    opacity: 0.8;
+    margin-top: 6px;
+  }
+
+  code {
+    display: inline-block;
+    padding: 8px;
+    background: var(--colorFgAlpha);
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    font-weight: 500;
+  }
+
+  h2 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4pt;
+    /* border-bottom: 1px solid var(--borderSubtleColor); */
+    color: inherit;
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: inherit;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+
+  .logo {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 0.9em;
+    /* margin-bottom: 4px; */
+    display: inline-flex;
+    align-items: center;
+    /* margin-left: calc(0px - 64px - 12px); */
+
+    .partOne {
+      color: var(--colorFgIntense);
+    }
+    .partTwo {
+      color: #ef3939;
+      /* color: var(--highlightBgColor); */
+    }
+  }
+
+  .optional {
+    opacity: 0.5;
+  }
+}
