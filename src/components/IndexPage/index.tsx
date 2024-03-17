@@ -52,7 +52,7 @@ function IndexPage() {
             </div>
             <a
               styleName="download"
-              href="https://github.com/lunavod/TreeTabs/releases"
+              href="https://chromewebstore.google.com/detail/treetabs/caldccmijplkmnnmfjjjbcpkkmeapcma"
               target="_blank"
             >
               <DownloadIcon />
